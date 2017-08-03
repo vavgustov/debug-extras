@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Vladimir Avgustov"]
   spec.email         = ["vavgustov@gmail.com"]
 
-  spec.summary       = 'Summary coming soon'
-  spec.description   = 'Description coming soon'
+  spec.summary       = 'Extras for rails debugging.'
+  spec.description   = 'Provide debug helper methods for ActionController::Base and ActionView::Base.'
   spec.homepage      = 'https://github.com/vavgustov/debug-extras'
   spec.license       = 'MIT'
 
