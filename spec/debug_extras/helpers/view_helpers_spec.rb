@@ -1,4 +1,4 @@
-require_relative '../spec_helper'
+require "spec_helper"
 
 RSpec.describe DebugExtras::Helpers::ViewHelpers do
   let(:view) do
@@ -8,11 +8,7 @@ RSpec.describe DebugExtras::Helpers::ViewHelpers do
     end
   end
 
-  it '#rap' do
-    expect(view.rap('data')).to match('data')
-  end
-
-  it '#object_dump' do
-    expect(view.object_dump('data')).to match('String')
+  it "#rap" do
+    expect(view.rap("data")).to match("data")
   end
 end

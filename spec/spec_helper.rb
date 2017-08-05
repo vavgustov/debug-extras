@@ -1,8 +1,5 @@
-require 'bundler/setup'
-require 'debug-extras'
-require 'debug_extras/helpers/controller_helpers'
-require 'debug_extras/helpers/view_helpers'
-require 'action_view/helpers/output_safety_helper'
+require "debug-extras"
+require "debug_extras/error_page"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
