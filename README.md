@@ -1,6 +1,8 @@
 # DebugExtras [![Gem](https://img.shields.io/gem/v/debug-extras.svg)](https://rubygems.org/gems/debug-extras) [![Build Status](https://img.shields.io/travis/vavgustov/debug-extras/master.svg)](https://travis-ci.org/vavgustov/debug-extras) [![Code Climate](https://img.shields.io/codeclimate/github/vavgustov/debug-extras.svg)](https://codeclimate.com/github/vavgustov/debug-extras)
 
-Extras for rails debugging.
+Extras for Ruby on Rails debugging.
+
+## Features
 
 At this moment provide next things:
 1. `dd <variable>` at any place of your application 
@@ -9,8 +11,9 @@ variable without any other stuff at your web browser.
 It's something like simple alternative to `dd` function from 
 [Laravel](https://laravel.com/) for [Ruby on Rails](http://rubyonrails.org/).
 
-2. `rap <variable>` at your views. It's shortcut for `raw ap(<variable>)` and 
-alternative to `debug` method from `ActionView::Helpers::DebugHelper`.
+2. `dump <variable>` at your views. It's alternative for `debug` method from `ActionView::Helpers::DebugHelper`.
+
+3. temporary fix for `better_errors` and `binding_or_caller` performance [issue](https://github.com/charliesome/better_errors/issues/341).
 
 ## Installation
 
@@ -28,14 +31,18 @@ Or you can install it using [rgversion](https://github.com/vavgustov/rgversion) 
 
 ## Samples
 
+`dd` from controller/model/service/etc:
+
 ```ruby
-dd self.instance_variables
+dd Book.all
 ```
 
-![image](https://user-images.githubusercontent.com/312873/28998770-ddfc7b74-7a3b-11e7-905b-52b3c1c797a4.png)
+![image](https://user-images.githubusercontent.com/312873/29333319-0480bb34-820c-11e7-82b0-3d2e648a4af8.png)
+
+`dump` from views:
 
 ```erb
-<%= rap self.instance_variables %>
+<%= dump Book.all %>
 ```
 
-![image](https://user-images.githubusercontent.com/312873/28998927-9111f88a-7a3f-11e7-9c8d-cb825472d8ca.png)
+![image](https://user-images.githubusercontent.com/312873/29333320-0482b484-820c-11e7-87ce-800e5319ce98.png)
