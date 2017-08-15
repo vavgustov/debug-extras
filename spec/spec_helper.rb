@@ -1,5 +1,6 @@
 require "debug-extras"
-require "debug_extras/error_page"
+require "debug_extras/helpers/view_helpers"
+require "debug_extras/dumper"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

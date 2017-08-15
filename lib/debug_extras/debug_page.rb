@@ -5,7 +5,7 @@ module DebugExtras
     def initialize(exception, request_path)
       @exception = exception
       @request_path = request_path
-      @template = File.read(File.expand_path("../templates/main.html.erb", __FILE__))
+      @template = File.read(File.expand_path("../templates/debug.html.erb", __FILE__))
     end
 
     def render

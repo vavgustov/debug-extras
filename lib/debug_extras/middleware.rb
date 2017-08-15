@@ -1,5 +1,3 @@
-require "debug_extras/debug_page"
-
 module DebugExtras
   class Middleware
     def initialize(app)

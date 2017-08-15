@@ -1,3 +1,6 @@
+require "action_view"
+require "awesome_print"
+
 module DebugExtras
   class Dumper
     include ActionView::Context
