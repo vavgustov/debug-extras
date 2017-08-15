@@ -13,7 +13,9 @@ module DebugExtras
     private
 
     def insert_middleware(middleware)
-      if defined? ActionDispatch::DebugExceptions
+      if defined? BetterErrors::Middleware
+        app.middleware.insert_before ActionDispatch::Reloader, middleware
+      elsif defined? ActionDispatch::DebugExceptions
         app.middleware.insert_after ActionDispatch::DebugExceptions, middleware
       else
         app.middleware.use middleware
