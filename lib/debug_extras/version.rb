@@ -1,7 +1,3 @@
-require_relative 'gem_version'
-
 module DebugExtras
-  def self.version
-    gem_version
-  end
+  VERSION = "0.2.0"
 end

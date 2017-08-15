@@ -5,7 +5,7 @@ require 'debug_extras/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "debug-extras"
-  spec.version       = DebugExtras.version
+  spec.version       = DebugExtras::VERSION
   spec.authors       = ["Vladimir Avgustov"]
   spec.email         = ["vavgustov@gmail.com"]
 

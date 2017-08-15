@@ -3,8 +3,8 @@ module DebugExtras
     module ViewHelpers
       extend ActiveSupport::Concern
 
-      def rap(object)
-        raw ap(object, DebugExtras::Settings.ap_options)
+      def dump(object, settings = {})
+        Dumper.new(object, settings).render
       end
     end
   end
