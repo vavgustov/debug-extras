@@ -50,7 +50,7 @@ module DebugExtras
       output = ""
 
       dump.split("<").map.with_index do |v, k|
-        if v.include? ":0x"
+        if v.include? ":0x" and not v.include? "kbd"
           v.sub!(">", "")
         else
           output << "<" unless k.zero?
