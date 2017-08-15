@@ -1,6 +1,6 @@
 # DebugExtras [![Gem](https://img.shields.io/gem/v/debug-extras.svg)](https://rubygems.org/gems/debug-extras) [![Build Status](https://img.shields.io/travis/vavgustov/debug-extras/master.svg)](https://travis-ci.org/vavgustov/debug-extras) [![Code Climate](https://img.shields.io/codeclimate/github/vavgustov/debug-extras.svg)](https://codeclimate.com/github/vavgustov/debug-extras)
 
-Extras for Ruby on Rails debugging.
+Extras for Ruby on Rails debugging. [Examples](https://github.com/vavgustov/debug-extras#examples).
 
 ## Features
 
@@ -29,7 +29,7 @@ And then execute:
 
 Or you can install it using [rgversion](https://github.com/vavgustov/rgversion) like any other gems.
 
-## Samples
+## Examples
 
 `dd` from controller/model/service/etc:
 
