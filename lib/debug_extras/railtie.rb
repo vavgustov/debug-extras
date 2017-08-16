@@ -23,8 +23,8 @@ module DebugExtras
     end
 
     def better_errors_slow?
-      return false unless defined? BetterErrors && defined? Puma
-      BetterErrors.binding_of_caller_available && [Rails.version, Puma::Const::PUMA_VERSION].map(&:to_i) == [5, 3]
+      return false unless defined?(BetterErrors) && defined?(Puma::Const::PUMA_VERSION)
+      BetterErrors.binding_of_caller_available && Puma::Const::PUMA_VERSION.split(".").first.to_i == 3
     end
 
     def app
