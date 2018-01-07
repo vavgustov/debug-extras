@@ -46,3 +46,7 @@ dd Book.all
 ```
 
 ![image](https://user-images.githubusercontent.com/312873/29333320-0482b484-820c-11e7-87ce-800e5319ce98.png)
+
+## License
+
+DebugExtras is released under the [MIT License](https://opensource.org/licenses/MIT).
