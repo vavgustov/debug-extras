@@ -1,3 +1,6 @@
+require "simplecov"
+SimpleCov.start
+
 require "debug-extras"
 require "debug_extras/helpers/view_helpers"
 require "debug_extras/dumper"
