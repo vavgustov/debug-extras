@@ -26,8 +26,6 @@ And then execute:
 
     $ bundle
 
-Or you can install it using [rgversion](https://github.com/vavgustov/rgversion) like any other gems.
-
 ## Screenshots
 
 `dd` from controller/model/service/etc:
