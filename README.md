@@ -14,8 +14,6 @@ It's something like simple alternative to `dd` function from
 
 2. `dump <variable>` at your views. It's alternative for `debug` method from `ActionView::Helpers::DebugHelper`.
 
-3. temporary fix for `better_errors` and `binding_or_caller` with `puma 3.x` performance [issue](https://github.com/charliesome/better_errors/issues/341).
-
 ## Installation
 
 Add this line to your Gemfile:

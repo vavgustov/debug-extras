@@ -8,7 +8,6 @@ module DebugExtras
 
   autoload :DebugPage
   autoload :Dumper
-  autoload :Middleware
   autoload :Settings
 
   ActiveSupport.on_load :action_view do
