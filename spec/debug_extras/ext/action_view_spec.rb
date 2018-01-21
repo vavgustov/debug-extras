@@ -1,9 +1,9 @@
 require "spec_helper"
 
-RSpec.describe DebugExtras::Helpers::ViewHelpers do
+RSpec.describe DebugExtras::ActionView do
   let(:view) do
     Class.new do
-      extend DebugExtras::Helpers::ViewHelpers
+      extend DebugExtras::ActionView
     end
   end
 

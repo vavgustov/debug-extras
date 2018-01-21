@@ -5,14 +5,19 @@ Extras for Ruby on Rails debugging. [Screenshots](https://github.com/vavgustov/d
 
 ## Features
 
+> Note: some of them not released as gem yet.
+
 At this moment provide next things:
-1. `dd <variable>` at any place of your application 
-(controllers/models/views/services/etc). After that you can see dump of this 
+* `dd <variable>` at any `app/` place. After that you can see dump of this 
 variable without any other stuff at your web browser. 
 It's something like simple alternative to `dd` function from 
 [Laravel](https://laravel.com/) for [Ruby on Rails](http://rubyonrails.org/).
 
-2. `dump <variable>` at your views. It's alternative for `debug` method from `ActionView::Helpers::DebugHelper`.
+* `wp <variable>` at any `app/` place. It's alternative to classic PHP print debugging. 
+Works for HTML pages.
+
+* `dump <variable>` at your views. It's alternative for `debug` method from 
+`ActionView::Helpers::DebugHelper` and `ap` from `AwesomePrint`.
 
 ## Installation
 

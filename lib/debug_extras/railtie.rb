@@ -3,9 +3,7 @@ require "debug_extras/middleware/debug"
 module DebugExtras
   class Railtie < Rails::Railtie
     initializer "debug_extras.configure_rails_initialization" do
-      if Rails.env.development?
-        insert_middleware(DebugExtras::Debug)
-      end
+      insert_middleware(DebugExtras::Debug) if Rails.env.development?
     end
 
     private

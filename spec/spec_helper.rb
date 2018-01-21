@@ -1,8 +1,12 @@
 require "simplecov"
 SimpleCov.start
 
+require "active_support/all"
+require "action_controller"
 require "debug-extras"
-require "debug_extras/helpers/view_helpers"
+require "debug_extras/ext/action_controller"
+require "debug_extras/ext/action_view"
+require "debug_extras/middleware/debug"
 require "debug_extras/dumper"
 
 RSpec.configure do |config|
