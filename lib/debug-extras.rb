@@ -1,11 +1,11 @@
 require "active_support/dependencies/autoload"
 require "active_support/lazy_load_hooks"
 require "debug_extras/core_ext/kernel"
+require "debug_extras/version"
+
 require "debug_extras/debug_page"
 require "debug_extras/dumper"
 require "debug_extras/settings"
-
-require "debug_extras/version"
 
 module DebugExtras
   extend ActiveSupport::Autoload

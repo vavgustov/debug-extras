@@ -25,7 +25,7 @@ RSpec.describe DebugExtras::Debug do
     context "by DebugExtras::DebugData" do
       let(:app) { DebugExtras::Debug.new(->env { raise exception_to_handle }) }
 
-      it "redner page with data" do
+      it "render page with data" do
         status, headers, body = app.call({})
         expect(body[0]).to include("something wrong")
       end
