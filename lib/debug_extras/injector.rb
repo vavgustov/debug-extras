@@ -16,7 +16,7 @@ module DebugExtras
 
     def response_is_html?
       return false unless @response.headers['Content-Type'].include?('html')
-      tags = %w[<html> <head> </head <body> </body </html>]
+      tags = %w[<html <head </head <body </body </html>]
       tags.each do |tag|
         return false unless @response.body.include? tag
       end
@@ -27,16 +27,20 @@ module DebugExtras
       return if $debug_extras_messages.blank?
       $debug_extras_messages.map! { |message| DebugExtras::Dumper.new(message, 'debug-wp').render }
       injection = $debug_extras_messages.join('')
-      @response.body = inject_content('<body>') { |html| html[1].prepend(injection) unless html.nil? }
+      @response.body = inject_content('<body') do |html|
+        body = html.second.split('>')
+        body.second.prepend(injection) if body.size > 1
+        html[1] = body.join('>')
+      end
     end
 
     def inject_styles
       return unless $debug_extras_add_styles
       injection = File.read(File.expand_path('../templates/styles.html', __FILE__))
-      @response.body = inject_content('</head>') { |html| html[0] << injection }
+      @response.body = inject_content('</head>') { |html| html.first << injection }
     end
 
-    def inject_content(tag, &block)
+    def inject_content(tag)
       html = @response.body.split(tag)
       yield html if block_given?
       html.join(tag)
