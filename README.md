@@ -5,6 +5,15 @@ Extras for Ruby on Rails debugging. [Screenshots](https://github.com/vavgustov/d
 
 > Note: README actual for master branch.
 
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Screenshots](#screenshots)
+    - [#dd](#dd)
+    - [#pw](#pw)
+    - [#dump](#dump)
+- [License](#license)
+
 ## Features
 
 At this moment provide next methods:
@@ -34,6 +43,8 @@ And then execute:
 
 ## Screenshots
 
+### #dd
+
 `#dd` from any `app/` place:
 
 ```ruby
@@ -41,6 +52,8 @@ dd @books
 ```
 
 ![image](https://user-images.githubusercontent.com/312873/35333798-26e3f95e-0121-11e8-86e1-4e0d5bd1b068.png)
+
+### #wp
 
 `#wp` from any `app/` place:
 
@@ -51,6 +64,7 @@ wp @authors
 
 ![image](https://user-images.githubusercontent.com/312873/35333801-271a9c0c-0121-11e8-91d5-740706150c32.png)
 
+### #dump
 
 `dump` from views:
 
