@@ -53,7 +53,7 @@ dd @books
 
 ![image](https://user-images.githubusercontent.com/312873/35333798-26e3f95e-0121-11e8-86e1-4e0d5bd1b068.png)
 
-### #wp
+### #pw
 
 `#wp` from any `app/` place:
 
