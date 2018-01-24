@@ -3,14 +3,15 @@
 
 Extras for Ruby on Rails debugging. [Screenshots](https://github.com/vavgustov/debug-extras#screenshots).
 
+> Note: README actual for master branch.
+
 ## Features
 
-> Note: some of them not released as gem yet.
+At this moment provide next methods:
 
-At this moment provide next things:
 * `dd <variable>` at any `app/` place. After that you can see dump of this 
 variable without any other stuff at your web browser. 
-It's something like simple alternative to `dd` function from 
+It's simple alternative to `dd` function from 
 [Laravel](https://laravel.com/) for [Ruby on Rails](http://rubyonrails.org/).
 
 * `wp <variable>` at any `app/` place. It's alternative to classic PHP print debugging. 
@@ -33,21 +34,32 @@ And then execute:
 
 ## Screenshots
 
-`dd` from controller/model/service/etc:
+`#dd` from any `app/` place:
 
 ```ruby
-dd Book.all
+dd @books
 ```
 
-![image](https://user-images.githubusercontent.com/312873/29333319-0480bb34-820c-11e7-82b0-3d2e648a4af8.png)
+![image](https://user-images.githubusercontent.com/312873/35333798-26e3f95e-0121-11e8-86e1-4e0d5bd1b068.png)
+
+`#wp` from any `app/` place:
+
+```ruby
+wp 'Authors through #wp method (called from controller):'
+wp @authors
+```
+
+![image](https://user-images.githubusercontent.com/312873/35333801-271a9c0c-0121-11e8-91d5-740706150c32.png)
+
 
 `dump` from views:
 
 ```erb
-<%= dump Book.all %>
+<%= dump 'Books through #dump method (called from view):' %>
+<%= dump @books %>
 ```
 
-![image](https://user-images.githubusercontent.com/312873/29333320-0482b484-820c-11e7-87ce-800e5319ce98.png)
+![image](https://user-images.githubusercontent.com/312873/35333799-26ffefba-0121-11e8-8021-a5faa62e6953.png)
 
 ## License
 
