@@ -10,7 +10,7 @@ Extras for Ruby on Rails debugging. [Screenshots](https://github.com/vavgustov/d
 - [Installation](#installation)
 - [Screenshots](#screenshots)
     - [#dd](#dd)
-    - [#pw](#pw)
+    - [#wp](#wp)
     - [#dump](#dump)
 - [License](#license)
 
@@ -53,7 +53,7 @@ dd @books
 
 ![image](https://user-images.githubusercontent.com/312873/35333798-26e3f95e-0121-11e8-86e1-4e0d5bd1b068.png)
 
-### #pw
+### #wp
 
 `#wp` from any `app/` place:
 
