@@ -2,7 +2,7 @@ require "debug_extras/middleware/debug"
 
 module DebugExtras
   class Railtie < Rails::Railtie
-    initializer "debug_extras.configure_rails_initialization" do
+    initializer "debug_extras.setup_middleware" do
       insert_middleware(DebugExtras::Debug) if Rails.env.development?
     end
 

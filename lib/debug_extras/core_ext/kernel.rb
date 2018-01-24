@@ -1,5 +1,3 @@
-require "debug_extras/exceptions"
-
 module Kernel
   # dump object through exception message
   def dd(dump)

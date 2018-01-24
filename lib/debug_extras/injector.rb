@@ -2,6 +2,7 @@ module DebugExtras
   class Injector
     def initialize(response)
       @response = response
+      @result = @response.body
     end
 
     def process_response
@@ -9,7 +10,7 @@ module DebugExtras
         inject_messages
         inject_styles
       end
-      @response.body
+      @result
     end
 
     private
@@ -27,7 +28,7 @@ module DebugExtras
       return if $debug_extras_messages.blank?
       $debug_extras_messages.map! { |message| DebugExtras::Dumper.new(message, 'debug-wp').render }
       injection = $debug_extras_messages.join('')
-      @response.body = inject_content('<body') do |html|
+      @result = inject_content('<body') do |html|
         body = html.second.split('>')
         body.second.prepend(injection) if body.size > 1
         html[1] = body.join('>')
@@ -37,11 +38,11 @@ module DebugExtras
     def inject_styles
       return unless $debug_extras_add_styles
       injection = File.read(File.expand_path('../templates/styles.html', __FILE__))
-      @response.body = inject_content('</head>') { |html| html.first << injection }
+      @result = inject_content('</head>') { |html| html.first << injection }
     end
 
     def inject_content(tag)
-      html = @response.body.split(tag)
+      html = @result.split(tag)
       yield html if block_given?
       html.join(tag)
     end

@@ -31,11 +31,29 @@ RSpec.describe DebugExtras::ActionController do
     end
   end
 
-  it "render message" do
-    $debug_extras_messages = ['message']
+  before do
     response = response_mock.new({ "Content-Type" => "text/html" }, "<html><head></head><body><h1>HTML content</h1></body></html>")
-    controller = action_controller_mock.new(response)
-    controller.render
-    expect(controller.response.body).to include('message')
+    @controller = action_controller_mock.new(response)
+  end
+
+  context "when message exists" do
+    before { $debug_extras_messages = ["message"] }
+
+    it "get an injection" do
+      @controller.render
+      expect(@controller.response.body).to include("message")
+    end
+  end
+
+  context "when message not exists" do
+    before do
+      $debug_extras_add_styles = false
+      $debug_extras_messages = []
+    end
+
+    it "return original content" do
+      @controller.render
+      expect(@controller.response.body).to eq("<html><head></head><body><h1>HTML content</h1></body></html>")
+    end
   end
 end

@@ -22,12 +22,11 @@ Gem::Specification.new do |spec|
 
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "awesome_print", ">= 1.6", "< 1.9"
+  spec.add_dependency "railties", "> 4.0", "< 6"
+
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 12.3"
   spec.add_development_dependency "rspec", "~> 3.7"
   spec.add_development_dependency "simplecov", "~> 0.15"
-
-  spec.add_runtime_dependency "awesome_print", ">= 1.6", "< 1.9"
-  spec.add_runtime_dependency "actionview", "> 4.0", "< 6"
-  spec.add_runtime_dependency "activesupport", "> 4.0", "< 6"
 end

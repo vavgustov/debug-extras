@@ -1,12 +1,14 @@
 require "simplecov"
-SimpleCov.start
+SimpleCov.start do
+  add_filter "/spec/"
+end
 
-require "active_support/all"
 require "debug-extras"
+require "debug_extras/dumper"
 require "debug_extras/ext/action_controller"
 require "debug_extras/ext/action_view"
+require "debug_extras/injector"
 require "debug_extras/middleware/debug"
-require "debug_extras/dumper"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

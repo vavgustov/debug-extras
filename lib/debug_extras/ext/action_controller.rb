@@ -1,5 +1,3 @@
-require 'debug_extras/injector'
-
 module DebugExtras
   module ActionController
     def render(*args)
