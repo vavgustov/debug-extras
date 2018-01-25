@@ -1,6 +1,8 @@
 require "spec_helper"
 
 RSpec.describe DebugExtras::ActionController do
+  let(:headers) { { "Content-Type" => "text/html" } }
+  let(:body) { "<html><head></head><body><h1>HTML content</h1></body></html>" }
   let(:response_mock) do
     Class.new do
       attr_accessor :body
@@ -12,7 +14,6 @@ RSpec.describe DebugExtras::ActionController do
       end
     end
   end
-
   let(:base_super_mock) do
     Class.new do
       attr_reader :response
@@ -24,7 +25,6 @@ RSpec.describe DebugExtras::ActionController do
       def render; end
     end
   end
-
   let(:action_controller_mock) do
     Class.new(base_super_mock) do
       include DebugExtras::ActionController
@@ -32,14 +32,14 @@ RSpec.describe DebugExtras::ActionController do
   end
 
   before do
-    response = response_mock.new({ "Content-Type" => "text/html" }, "<html><head></head><body><h1>HTML content</h1></body></html>")
+    response = response_mock.new(headers, body)
     @controller = action_controller_mock.new(response)
   end
 
   context "when message exists" do
     before { $debug_extras_messages = ["message"] }
 
-    it "get an injection" do
+    it "inject message to response body" do
       @controller.render
       expect(@controller.response.body).to include("message")
     end
@@ -51,9 +51,9 @@ RSpec.describe DebugExtras::ActionController do
       $debug_extras_messages = []
     end
 
-    it "return original content" do
+    it "bypass response body" do
       @controller.render
-      expect(@controller.response.body).to eq("<html><head></head><body><h1>HTML content</h1></body></html>")
+      expect(@controller.response.body).to eq(body)
     end
   end
 end
