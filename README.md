@@ -10,7 +10,7 @@ Extras for Ruby on Rails debugging. [Screenshots](https://github.com/vavgustov/d
     - [#dd](#dd)
     - [#wp](#wp)
     - [#dump](#dump)
-- [Styling](#styling)    
+- [Styling](#styling)
 - [License](#license)
 
 ## Features
@@ -70,8 +70,28 @@ Call `dump` from views:
 ![image](https://user-images.githubusercontent.com/312873/35333799-26ffefba-0121-11e8-8021-a5faa62e6953.png)
 
 ## Styling
-DebugExtras inject CSS to the page on methods call. You can override styles and set your fonts, 
-margins, etc using `.debug-extras` wrapper. Just look to page sources to get an idea.  
+
+DebugExtras inject default CSS to the page on methods call. You can override styles and 
+set your fonts, margins, etc using `.debug-extras` wrapper. Just look to the page sources to see 
+them in the end of head section.
+
+Example how to override default fonts in your stylesheet:
+```css
+.debug-extras pre,
+.debug-extras kbd {
+    font-family: Consolas, SFMono-Regular, Menlo, Monaco, Ubuntu, monospace !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
+}
+```
+or may be you want to use `pre-wrap` rendering:
+```css
+.debug-extras pre {
+    white-space: pre-wrap !important;
+}
+```
+>Note: if #wp and #dump results look different compare to the screenshots above then your styles
+overrided default settings. 
 
 ## License
 
