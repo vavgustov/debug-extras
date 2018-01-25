@@ -9,6 +9,7 @@ module DebugExtras
     def initialize(dump, css_class)
       @dump = dump
       @css_class = "debug-extras #{css_class}"
+      $debug_extras_add_styles = true
     end
 
     def render

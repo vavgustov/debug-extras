@@ -11,7 +11,6 @@ module Kernel
     $debug_extras_messages ||= []
     unless message.blank?
       $debug_extras_messages << message
-      $debug_extras_add_styles = true
     end
   end
 end
