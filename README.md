@@ -1,30 +1,29 @@
 # DebugExtras 
 [![Gem](https://img.shields.io/gem/v/debug-extras.svg)](https://rubygems.org/gems/debug-extras) [![Build Status](https://img.shields.io/travis/vavgustov/debug-extras/master.svg)](https://travis-ci.org/vavgustov/debug-extras) [![Maintainability](https://api.codeclimate.com/v1/badges/63067512ae858df2a5b3/maintainability)](https://codeclimate.com/github/vavgustov/debug-extras/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/63067512ae858df2a5b3/test_coverage)](https://codeclimate.com/github/vavgustov/debug-extras/test_coverage)
 
-Extras for Ruby on Rails debugging. [Screenshots](https://github.com/vavgustov/debug-extras#screenshots).
+Extras for Ruby on Rails debugging. [Screenshots](https://github.com/vavgustov/debug-extras#usage).
 
 > Note: README actual for master branch.
 
 ## Table of Contents
 - [Features](#features)
 - [Installation](#installation)
-- [Screenshots](#screenshots)
+- [Usage](#usage)
     - [#dd](#dd)
     - [#wp](#wp)
     - [#dump](#dump)
+- [Styling](#styling)    
 - [License](#license)
 
 ## Features
 
 At this moment provide next methods:
 
-* `dd <variable>` at any `app/` place. After that you can see dump of this 
-variable without any other stuff at your web browser. 
-It's simple alternative to `dd` function from 
-[Laravel](https://laravel.com/) for [Ruby on Rails](http://rubyonrails.org/).
+* `dd <variable>` at any `app/` place. Inspired by `dd` function from 
+[Laravel](https://laravel.com/).
 
-* `wp <variable>` at any `app/` place. It's alternative to classic PHP print debugging. 
-Works for HTML pages.
+* `wp <variable>` at any `app/` place. Inspired by classic PHP 'print' debugging. 
+It works for HTML pages and bypass other content types like `application/json`.
 
 * `dump <variable>` at your views. It's alternative for `debug` method from 
 `ActionView::Helpers::DebugHelper` and `ap` from `AwesomePrint`.
@@ -41,7 +40,7 @@ And then execute:
 
     $ bundle
 
-## Screenshots
+## Usage
 
 ### #dd
 
@@ -74,6 +73,10 @@ wp @authors
 ```
 
 ![image](https://user-images.githubusercontent.com/312873/35333799-26ffefba-0121-11e8-8021-a5faa62e6953.png)
+
+## Styling
+DebugExtras inject CSS to the page on methods calls. You can override styles and set your fonts, 
+margins, etc using `.debug-extras` wrapper. Just look to page html sources to get an idea.  
 
 ## License
 
