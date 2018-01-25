@@ -17,7 +17,7 @@ module DebugExtras
 
     def response_is_html?
       return false unless @response.headers['Content-Type'].include?('html')
-      tags = %w[<html <head </head <body </body </html>]
+      tags = %w[<html <head </head> <body </body> </html>]
       tags.each do |tag|
         return false unless @response.body.include? tag
       end
