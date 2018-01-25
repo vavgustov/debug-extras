@@ -90,8 +90,8 @@ or may be you want to use `pre-wrap` rendering:
     white-space: pre-wrap !important;
 }
 ```
->Note: if #wp and #dump results look different compare to the screenshots above then your styles
-overrided default settings. 
+>Note: if #wp and #dump results look different compare to the screenshots above then default 
+styles were overridden by yours. 
 
 ## License
 
