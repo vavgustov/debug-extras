@@ -3,8 +3,6 @@
 
 Extras for Ruby on Rails debugging. [Screenshots](https://github.com/vavgustov/debug-extras#usage).
 
-> Note: README actual for master branch.
-
 ## Table of Contents
 - [Features](#features)
 - [Installation](#installation)
