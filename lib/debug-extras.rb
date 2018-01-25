@@ -8,16 +8,16 @@ module DebugExtras
   autoload :Dumper
   autoload :Injector
   autoload :Settings
+end
 
-  ActiveSupport.on_load :action_view do
-    require "debug_extras/ext/action_view"
-    ::ActionView::Base.send :include, DebugExtras::ActionView
-  end
+ActiveSupport.on_load :action_view do
+  require "debug_extras/ext/action_view"
+  ::ActionView::Base.send :include, DebugExtras::ActionView
+end
 
-  ActiveSupport.on_load :action_controller do
-    require "debug_extras/ext/action_controller"
-    ::ActionController::Base.send :include, DebugExtras::ActionController
-  end
+ActiveSupport.on_load :action_controller do
+  require "debug_extras/ext/action_controller"
+  ::ActionController::Base.send :include, DebugExtras::ActionController
 end
 
 require "debug_extras/core_ext/kernel"
