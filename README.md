@@ -73,7 +73,7 @@ Call `dump` from views:
 
 ## Styling
 DebugExtras inject CSS to the page on methods call. You can override styles and set your fonts, 
-margins, etc using `.debug-extras` wrapper. Just look to page html sources to get an idea.  
+margins, etc using `.debug-extras` wrapper. Just look to page sources to get an idea.  
 
 ## License
 
