@@ -75,7 +75,7 @@ wp @authors
 ![image](https://user-images.githubusercontent.com/312873/35333799-26ffefba-0121-11e8-8021-a5faa62e6953.png)
 
 ## Styling
-DebugExtras inject CSS to the page on methods calls. You can override styles and set your fonts, 
+DebugExtras inject CSS to the page on methods call. You can override styles and set your fonts, 
 margins, etc using `.debug-extras` wrapper. Just look to page html sources to get an idea.  
 
 ## License
