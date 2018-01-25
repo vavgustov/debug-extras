@@ -16,9 +16,6 @@ Extras for Ruby on Rails debugging. [Screenshots](https://github.com/vavgustov/d
 - [License](#license)
 
 ## Features
-
-At this moment provide next methods:
-
 * `dd <variable>` at any `app/` place. Inspired by `dd` function from 
 [Laravel](https://laravel.com/).
 
@@ -44,7 +41,7 @@ And then execute:
 
 ### #dd
 
-`#dd` from any `app/` place:
+Call `dd` from any `app/` place:
 
 ```ruby
 dd @books
@@ -54,7 +51,7 @@ dd @books
 
 ### #wp
 
-`#wp` from any `app/` place:
+Call `wp` from any `app/` place:
 
 ```ruby
 wp 'Authors through #wp method (called from controller):'
@@ -65,7 +62,7 @@ wp @authors
 
 ### #dump
 
-`dump` from views:
+Call `dump` from views:
 
 ```erb
 <%= dump 'Books through #dump method (called from view):' %>
