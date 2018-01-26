@@ -1,7 +1,7 @@
 # DebugExtras 
 [![Gem](https://img.shields.io/gem/v/debug-extras.svg)](https://rubygems.org/gems/debug-extras) [![Build Status](https://img.shields.io/travis/vavgustov/debug-extras/master.svg)](https://travis-ci.org/vavgustov/debug-extras) [![Maintainability](https://api.codeclimate.com/v1/badges/63067512ae858df2a5b3/maintainability)](https://codeclimate.com/github/vavgustov/debug-extras/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/63067512ae858df2a5b3/test_coverage)](https://codeclimate.com/github/vavgustov/debug-extras/test_coverage)
 
-Extras for Ruby on Rails debugging. [Screenshots](https://github.com/vavgustov/debug-extras#usage).
+Helper methods for Ruby on Rails applications debugging. [Screenshots](https://github.com/vavgustov/debug-extras#usage).
 
 ## Table of Contents
 - [Features](#features)
@@ -17,7 +17,7 @@ Extras for Ruby on Rails debugging. [Screenshots](https://github.com/vavgustov/d
 * `dd <variable>` at any `app/` place. Inspired by `dd` function from 
 [Laravel](https://laravel.com/).
 
-* `wp <variable>` at any `app/` place. Inspired by classic PHP 'print' debugging. 
+* `wp <variable>` at any `app/` place. Inspired by classic PHP 'print' debug. 
 It works for HTML pages and bypass other content types like `application/json`.
 
 * `dump <variable>` at your views. It's alternative for `debug` method from 
@@ -73,7 +73,7 @@ Call `dump` from views:
 
 DebugExtras inject default CSS to the page on methods call. You can override styles and 
 set your fonts, margins, etc using `.debug-extras` wrapper. Just look to the page sources to see 
-them in the end of head section.
+them at the end of head section.
 
 Example how to override default fonts in your stylesheet:
 ```css
