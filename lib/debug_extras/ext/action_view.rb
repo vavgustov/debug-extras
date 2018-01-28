@@ -1,5 +1,3 @@
-require "active_support/concern"
-
 module DebugExtras
   module ActionView
     def dump(object)

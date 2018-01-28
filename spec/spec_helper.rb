@@ -4,10 +4,8 @@ SimpleCov.start do
 end
 
 require "debug-extras"
-require "debug_extras/dumper"
 require "debug_extras/ext/action_controller"
 require "debug_extras/ext/action_view"
-require "debug_extras/injector"
 require "debug_extras/middleware/debug"
 
 RSpec.configure do |config|
