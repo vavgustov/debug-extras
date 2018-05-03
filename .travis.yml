@@ -4,11 +4,10 @@ env:
     - CC_TEST_REPORTER_ID=61fe9088e439d6574c5637416244043c983795d2e70f2e01e5435a144ada5aee
 language: ruby
 rvm:
-  - 2.1.10
-  - 2.2.9
-  - 2.3.6
-  - 2.4.3
-  - 2.5.0
+  - 2.2.10
+  - 2.3.7
+  - 2.4.4
+  - 2.5.1
 before_install: 
   - gem install bundler -v 1.16.1
 before_script:
